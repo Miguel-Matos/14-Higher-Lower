@@ -7,6 +7,7 @@ def game():
     def item_generator():
         chosen_number = random.randint(0, len(game_data.data) - 1)
         return chosen_number
+    
     item_selector_a = item_generator()
     item_selector_b = item_generator()
     score = 0
@@ -26,7 +27,6 @@ def game():
                     item_selector_a = item_generator()
                     item_selector_b = item_generator()
                     score += 1
-                   
             elif game_data.data[item_selector_a]["follower_count"] < game_data.data[item_selector_b]["follower_count"]:
                     game_over = True
         elif player_guess == "B":
